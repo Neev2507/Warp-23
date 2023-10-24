@@ -97,6 +97,10 @@ headers.forEach(i => i.addEventListener('click', (e) => {
 }))
 
 const startAnimation = () => {
-    console.log('animation started super secret spy stuff');
-    document.documentElement.innerHTML = 'super secret spy stuff idk what even';
+    const overlays = Array.from(document.querySelectorAll('.overlay'));
+    overlays[0].style.animation = "overlay-animation 2s forwards";
+    setTimeout(() => {overlays[1].style.animation = "overlay-animation 2s forwards"}, 500);
+    setTimeout(() => {overlays[2].style.animation = "overlay-animation 2s forwards"}, 1000);
+    setTimeout(() => {overlays[3].style.animation = "overlay-animation 2s forwards"}, 1500);
+    setTimeout(() => {window.location = '/reality'}, 3500);
 }

@@ -298,3 +298,24 @@ mark {
 .header:hover {
     color: lime !important;
 }
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000aa;
+    z-index: 10;
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+}
+
+@keyframes overlay-animation {
+    0% {
+        top: -100vh;
+        left: -100vw;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
