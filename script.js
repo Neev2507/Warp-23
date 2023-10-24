@@ -71,3 +71,21 @@ searchInput.addEventListener('input', (e)=> {
     instance.unmark();
     instance.markRegExp(new RegExp(searchWord, 'gi'));
 })
+
+
+var t;
+var numClicks = 0;
+const faqs = document.querySelector(".header:last-child")
+faqs.addEventListener('click', () => {
+    numClicks++;
+    if (numClicks == 3) {
+        clearTimeout(t);
+        startAnimation();
+    }
+    t = setTimeout(() => {numClicks = 0}, 1000);
+})
+
+const startAnimation = () => {
+    console.log('animation started super secret spy stuff');
+    document.documentElement.innerHTML = '';
+}
