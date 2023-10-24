@@ -82,3 +82,9 @@ body {
         opacity: 100%;
     }
 }
+
+.ip {
+    position: fixed;
+    bottom: 20px;
+    animation: fade-in 1s forwards, float-in 1s forwards;
+}
