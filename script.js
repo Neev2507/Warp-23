@@ -75,17 +75,24 @@ searchInput.addEventListener('input', (e)=> {
 
 var t;
 var numClicks = 0;
-const faqs = document.querySelector(".header:last-child")
-faqs.addEventListener('click', () => {
-    numClicks++;
-    if (numClicks == 3) {
+var superSecretSpyPasscode = [4,2,4,2,4,2];
+const headers = document.querySelectorAll(".header")
+headers.forEach(i => i.addEventListener('click', (e) => {
+    if (Array.from(e.target.parentElement.children).indexOf(e.target) == superSecretSpyPasscode[numClicks]) {
+        numClicks++;
+    }
+    else {
+        clearTimeout(t);
+        numClicks = 0;
+    }
+    if (numClicks == superSecretSpyPasscode.length) {
         clearTimeout(t);
         startAnimation();
     }
-    t = setTimeout(() => {numClicks = 0}, 1000);
-})
+    t = setTimeout(() => {numClicks = 0}, 2000);
+}))
 
 const startAnimation = () => {
     console.log('animation started super secret spy stuff');
-    document.documentElement.innerHTML = '';
+    document.documentElement.innerHTML = 'super secret spy stuff idk what even';
 }
