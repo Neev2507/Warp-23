@@ -73,7 +73,7 @@ searchInput.addEventListener('input', (e)=> {
 })
 
 
-var t;
+var t = [];
 var numClicks = 0;
 var superSecretSpyPasscode = [4,2,4,2,4,2];
 const headers = document.querySelectorAll(".header")
@@ -82,14 +82,18 @@ headers.forEach(i => i.addEventListener('click', (e) => {
         numClicks++;
     }
     else {
-        clearTimeout(t);
+        for (var time of t) {
+            clearTimeout(time);
+        }
         numClicks = 0;
     }
     if (numClicks == superSecretSpyPasscode.length) {
-        clearTimeout(t);
+        for (var time of t) {
+            clearTimeout(time);
+        }
         startAnimation();
     }
-    t = setTimeout(() => {numClicks = 0}, 2000);
+    t.push(setTimeout(() => {numClicks = 0}, 3000));
 }))
 
 const startAnimation = () => {
