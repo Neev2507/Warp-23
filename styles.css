@@ -294,3 +294,7 @@ mark {
     background-color: var(--primary-color);
     color: var(--background-color);
 }
+
+.header:hover {
+    color: lime !important;
+}
