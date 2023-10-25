@@ -25,9 +25,9 @@ var pages={
 <li class='list2'>Electrostatic Grappling Gloves </li>
 </ul>
 <div class="buttons">
-<button class="logout">Connect</button><br>
-<button class="logout">Connect</button><br>
-<button class="logout">Connect</button>
+<button class="logout">Learn More</button><br>
+<button class="logout">Learn More</button><br>
+<button class="logout">Learn More</button>
 </div>
 </div>`
 }
