@@ -88,3 +88,38 @@ body {
     bottom: 20px;
     animation: fade-in 1s forwards, float-in 1s forwards;
 }
+
+.welcome {
+    font-size: 80px;
+}
+
+.nerv-logo {
+    position: fixed;
+    right: -250px;
+    bottom: 20px;
+}
+
+.cosmo-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in 1s forwards;
+}
+
+.float-in-right {
+    animation: float-in-right 1s forwards;
+}
+
+@keyframes float-in-right {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 20px;
+    }
+}
