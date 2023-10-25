@@ -73,7 +73,7 @@ body {
 }
 
 .logout:hover {
-    background: black !important;
+    background: transparent !important;
     color: white !important;
     border: 2px solid white;
 }
@@ -110,11 +110,36 @@ body {
 font-family: Roboto Mono;
 font-size: 28px;
 margin-left:10px
-}
 
+}
+.list2{
+    margin-top:40px;
+    color: #FFF;
+
+font-family: Roboto Mono;
+font-size: 28px;
+
+
+}
 .list-date{
     color: rgba(255, 255, 255, 0.50);
 font-family: Roboto Mono;
 font-size: 24px;
 margin-left:10px;
+}
+.buttons{
+    font-size:20px;
+    font-family: 'Roboto Mono';
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+.buttons button {
+    font-family: 'Roboto Mono';
+    font-size: 25px;
+    cursor: pointer;
+}
+.container{
+    display:flex;
+    gap:100px;
 }
