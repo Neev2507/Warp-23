@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+.bg-img {
+    background: url("assets/images/bg.png") center/cover;
+    z-index: -1;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    animation: fade-in 1s forwards;
+}
+body {
+    padding: 50px;
+    font-family: 'Roboto Mono';
+    background: black;
+    color: white;
+}
+
+.nerv-logo2 {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    animation: fade-in 1s forwards;
+}
+.nav-bar{
+    padding: 0;
+    width: 100%;
+    font-family:'Roboto Mono';
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar button {
+    width: fit-content;
+    font-family: 'Roboto Mono';
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    position: relative;
+}
+
+.logout {
+    height: 50px;
+    width: 160px !important;
+    background: #D9D9D9 !important;
+    border-radius: 100vw;
+    color: black !important ;
+    transition: all 1s;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:not(.logout)::after {
+    content: '';
+    width: 92%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.5s;
+}
+
+.button:not(.logout):hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.logout:hover {
+    background: black !important;
+    color: white !important;
+    border: 2px solid white;
+}
+.text{
+    margin-top:250px;
+    margin-left:53px;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px #000;
+    font-family: Roboto Mono;
+}
+
+
+
+.content-container {
+    margin-top: 100px;
+    font-size: 25px;
+    margin-left: 30px;
+}

@@ -98,6 +98,12 @@ body {
     right: -250px;
     bottom: 20px;
 }
+.nerv-logo2 {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    animation: fade-in 1s forwards;
+}
 
 .cosmo-logo {
     position: fixed;
@@ -122,4 +128,10 @@ body {
     100% {
         right: 20px;
     }
+}
+.cosmo-logo2 {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    animation: float-in 2s forwards;
 }
