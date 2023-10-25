@@ -11,9 +11,9 @@ var pages={
     </ol> `,
     resources:`<p class="headlines-heading">Resources</p>
     <ul>
-        <li class='list'>Defence Weapon Inventory</li>
-        <li class='list'>Inter-Planetary Allies</li>
-        <li class='list' onclick="defencething()">Defence House Locations</li>
+        <li class='list' >Defence Weapon Inventory</li>
+        <li class='list' >Inter-Planetary Allies</li>
+        <li class='list' onclick="defencething()" >Defence House Locations</li>
     </ul>`,
     spyware: `
 
@@ -21,8 +21,8 @@ var pages={
     <div class="container">
 <ul>
 <li class='list2'>Enemy Tactical Positioning Drone </li>
-<li class='list2'>Network Tapper </li>
-<li class='list2'>Sleeper Cells </li>
+<li class='list2'>Augmented Reality Glasses </li>
+<li class='list2'>Electrostatic Grappling Gloves </li>
 </ul>
 <div class="buttons">
 <button class="logout">Connect</button><br>
@@ -61,6 +61,7 @@ const defencething = () => {
     document.querySelector('.popup-defence-house').style.animation = 'enlarge 1s forwards ';
     
 }
+
 const closepopup = () => {
     document.querySelector('.popup-defence-house-container').style.animation = 'fade-in 1s reverse forwards';
     document.querySelector('.popup-defence-house').style.animation = 'enlarge 1s reverse forwards ';
