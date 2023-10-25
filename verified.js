@@ -13,7 +13,7 @@ var pages={
     <ul>
         <li class='list'>Defence Weapon Inventory</li>
         <li class='list'>Inter-Planetary Allies</li>
-        <li class='list'>Defence House Locations</li>
+        <li class='list' onclick="defencething()">Defence House Locations</li>
     </ul>`,
     spyware: `
 
@@ -55,3 +55,14 @@ logout_btn.addEventListener('click',()=>{
 })
 
 
+const defencething = () => {
+    document.querySelector('.popup-defence-house-container').style.display = 'block';
+    document.querySelector('.popup-defence-house-container').style.animation = 'fade-in 1s forwards';
+    document.querySelector('.popup-defence-house').style.animation = 'enlarge 1s forwards ';
+    
+}
+const closepopup = () => {
+    document.querySelector('.popup-defence-house-container').style.animation = 'fade-in 1s reverse forwards';
+    document.querySelector('.popup-defence-house').style.animation = 'enlarge 1s reverse forwards ';
+    document.querySelector('.popup-defence-house-container').style.display = 'none';
+}
