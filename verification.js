@@ -19,7 +19,7 @@ const verify = (callsign, phrase, cookie) => {
         form_data.append(key, item[key].replaceAll('+', ' '));
     }
 
-    fetch(backend, {method:'POST', body:form_data}).then((res) => {
+    fetch(backend, {method:'POST', body:form_data, credentials: "same-origin"}).then((res) => {
         res.json().then((data) => {
             if (!data.auth) {
                 window.location = '/';
