@@ -20,7 +20,7 @@ renderer.setClearColor(0xffffff, 0);
 renderer.outputColorSpace = THREE.SRGBColorSpace 
 const scene = new THREE.Scene();
 LoadGLTFByPath(scene);
-const camera = new THREE.PerspectiveCamera(60,1,0.1,1000);
+const camera = new THREE.PerspectiveCamera(60,window.innerHeight / window.innerWidth,0.1,1000);
 camera.position.setX(1);
 camera.position.setY(1);
 camera.position.setZ(1);
