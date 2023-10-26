@@ -67,4 +67,4 @@ const openpopup = (popupID) => {
     
 }
 let data = JSON.parse(document.cookie.split('=')[1])
-document.querySelector('.name') = data.name
+document.querySelector('.name').innerHTML = data.name
