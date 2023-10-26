@@ -27,9 +27,9 @@ LoadGLTFByPath(scene);
 scene.add( directionalLight );
 scene.add( ambientLight );
 const camera = new THREE.PerspectiveCamera(60,1,0.1,1000);
-camera.position.setX(1);
-camera.position.setY(1);
-camera.position.setZ(1);
+camera.position.setX(3);
+camera.position.setY(3);
+camera.position.setZ(3);
 const controls = new OrbitControls( camera, renderer.domElement);
 animate();
 function animate() {

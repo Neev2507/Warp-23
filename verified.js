@@ -1,5 +1,19 @@
+const parseCookie = str =>
+  str
+  .split(';')
+  .map(v => v.split('='))
+  .reduce((acc, v) => {
+    acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+    return acc;
+  }, {});
+
+
+let data = JSON.parse(parseCookie(document.cookie).data)
+document.querySelector('.name').innerHTML = data.info[2]
+document.querySelector('.cscall').innerHTML = data.info[1]
+
 var pages={
-    verified: `<p class="verified">Verified<span class="loading">...</span> Kevin Baba.</p>`,
+    verified: `<p class="verified">Welcome<span class="loading">...</span>${data.info[2]}</p>`,
     headlines:`<p class="headlines-heading">Headlines</p>
     <ol>
      <li class="list">WANTED: Drayvok, Martian, 5&apos;4&quot;, Reddish brown </li>
@@ -11,7 +25,7 @@ var pages={
     </ol> `,
     resources:`<p class="headlines-heading">Resources</p>
     <ul>
-        <li class='list' >Defence Weapon Inventory</li>
+        <li class='list' onclick="openpopup('weapons')">Defence Weapon Inventory</li>
         <li class='list' >Inter-Planetary Allies</li>
         <li class='list' onclick="openpopup('defence-house')" >Defence House Locations</li>
     </ul>`,
@@ -51,7 +65,8 @@ spyware_btn.addEventListener('click',()=>{
     page.innerHTML=pages.spyware;
 })
 logout_btn.addEventListener('click',()=>{
-    window.location='/reality';
+    document.cookie = '';
+    window.location='/';
 })
 
 const closepopup = (popupID) => {
@@ -66,17 +81,3 @@ const openpopup = (popupID) => {
     document.querySelector(`.popup-${popupID}`).style.animation = 'enlarge 1s forwards ';
     
 }
-
-const parseCookie = str =>
-  str
-  .split(';')
-  .map(v => v.split('='))
-  .reduce((acc, v) => {
-    acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
-    return acc;
-  }, {});
-
-
-let data = JSON.parse(parseCookie(document.cookie).data)
-document.querySelector('.name').innerHTML = data.info[2]
-document.querySelector('.cscall').innerHTML = data.info[1]
