@@ -19,23 +19,14 @@ const verify = (callsign, phrase, cookie) => {
         form_data.append(key, item[key].replaceAll('+', ' '));
     }
 
-    fetch(backend, {
-        method:'POST', 
-        body:form_data,
-        credentials: 'include'
-    }).then((res) => {
+    fetch(backend, {method:'POST', body:form_data}).then((res) => {
         res.json().then((data) => {
             if (!data.auth) {
                 window.location = '/';
             }
             else {
-                if (!cookie) {
-                    document.cookie = `id=${data.cookieHash}`
-                    window.location = '/verified';
-                }
-                else {
-                    return data;
-                }
+                document.cookie = `data=${JSON.stringify(data)}`
+                window.location = '/verified';
             }
         })
     })
