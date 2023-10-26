@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.google.com/specimen/Sometype+Mono');
 
 body {
     padding: 50px;
-    font-family: 'Inter';
+    font-family: 'Sometype Mono';
     background: black;
     color: white;
 }
