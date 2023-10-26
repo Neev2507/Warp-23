@@ -205,3 +205,13 @@ margin-left:10px;
 canvas {
     border: 1px solid white;
 }
+.image-container{
+    position:relative;
+}
+.image{
+    position:absolute;
+    top:calc(50%);
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+}
