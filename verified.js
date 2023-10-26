@@ -66,5 +66,16 @@ const openpopup = (popupID) => {
     document.querySelector(`.popup-${popupID}`).style.animation = 'enlarge 1s forwards ';
     
 }
-let data = JSON.parse(document.cookie.split('=')[1])
+
+const parseCookie = str =>
+  str
+  .split(';')
+  .map(v => v.split('='))
+  .reduce((acc, v) => {
+    acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+    return acc;
+  }, {});
+
+
+let data = JSON.parse(parseCookie(document.cookie).data)
 document.querySelector('.name').innerHTML = data.name
