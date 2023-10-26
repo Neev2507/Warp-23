@@ -8,7 +8,7 @@ function get(name){
 
 
 
-const verify = (callsign, phrase) => {
+const verify = (callsign, phrase, cookie) => {
     const item = {
         callsign: callsign,
         phrase: phrase
@@ -25,7 +25,13 @@ const verify = (callsign, phrase) => {
                 window.location = '/';
             }
             else {
-                window.location = '/verified';
+                if (!cookie) {
+                    document.cookie = `id=${data.cookieHash}`
+                    window.location = '/verified';
+                }
+                else {
+                    return data;
+                }
             }
         })
     })
