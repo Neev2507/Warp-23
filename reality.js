@@ -22,7 +22,7 @@ var html = `
                 <path d="M1126.22 296.15H1007.83V328.15H1126.22V363.71H1007.83V395.81H1126.22V431.36H972.22V260.6H1126.22V296.15Z" fill="#231F20"/>
                 </svg>              
                 </div>
-    <form action="verified.html" class="verification-form">
+    <form class="verification-form">
         <div class="heading">
             Verification
         </div>
@@ -51,6 +51,15 @@ const destroyInterval = () => {
     document.querySelector('.nerv-logo').classList.add('float-in-right');
     setTimeout(()=>{
         document.body.innerHTML=html.replace('{{ip}}',ip.ip);
+
+        const form = document.querySelector('.verification-form');
+
+        form.onsubmit = (E) => {
+            E.preventDefault();
+            let callsign = document.querySelector('input[name="callsign"]').value
+            let phrase = document.querySelector('input[name="phrase"]').value
+            verify(callsign, phrase);
+        }
     },2000)
 }
 

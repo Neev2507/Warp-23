@@ -6,15 +6,27 @@ function get(name){
     //https://stackoverflow.com/questions/831030/how-to-get-get-request-parameters-in-javascript
 }
 
-const item = {
-    callsign: get('callsign'),
-    phrase: get('phrase')
+
+
+const verify = (callsign, phrase) => {
+    const item = {
+        callsign: callsign,
+        phrase: phrase
+    }
+    var form_data = new FormData();
+
+    for ( var key in item ) {
+        form_data.append(key, item[key].replaceAll('+', ' '));
+    }
+
+    fetch(backend, {method:'POST', body:form_data}).then((res) => {
+        res.json().then((data) => {
+            if (!data.auth) {
+                window.location = '/';
+            }
+            else {
+                window.location = '/verified';
+            }
+        })
+    })
 }
-
-var form_data = new FormData();
-
-for ( var key in item ) {
-    form_data.append(key, item[key]);
-}
-
-fetch(backend, {method:'POST', body:form_data})
