@@ -78,4 +78,5 @@ const parseCookie = str =>
 
 
 let data = JSON.parse(parseCookie(document.cookie).data)
-document.querySelector('.name').innerHTML = data.name
+document.querySelector('.name').innerHTML = data.info[2]
+document.querySelector('.cscall').innerHTML = data.info[1]
