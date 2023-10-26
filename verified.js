@@ -6,14 +6,18 @@ const parseCookie = str =>
     acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
     return acc;
   }, {});
-
-
-let data = JSON.parse(parseCookie(document.cookie).data)
+let data;
+try {
+ data = JSON.parse(parseCookie(document.cookie).data)
 document.querySelector('.name').innerHTML = data.info[2]
 document.querySelector('.cscall').innerHTML = data.info[1]
+}
+catch {
+     data = {info:['','','']}
+}
 
 var pages={
-    verified: `<p class="verified">Welcome<span class="loading">...</span>${data.info[2]}</p>`,
+    verified: `<p class="verified">Welcome<span class="loading">...</span> ${data.info[2]}</p>`,
     headlines:`<p class="headlines-heading">Headlines</p>
     <ol>
      <li class="list">WANTED: Drayvok, Martian, 5&apos;4&quot;, Reddish brown </li>

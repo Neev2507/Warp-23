@@ -1,9 +1,9 @@
 import * as THREE from 'three'
-import { LoadGLTFByPath } from './Helpers/ModelHelper.js'
+import { LoadGLTFByPath } from './Helpers/ModelHelper_mecha.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 let renderer = new THREE.WebGLRenderer({
-	canvas: document.querySelector('#bg'),
+	canvas: document.querySelector('#mecha'),
   antialias: true,
 });
 
