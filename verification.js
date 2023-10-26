@@ -22,9 +22,7 @@ const verify = (callsign, phrase, cookie) => {
     fetch(backend, {
         method:'POST', 
         body:form_data,
-        headers: {
-            'Cookie':document.cookie
-        }
+        credentials: 'include'
     }).then((res) => {
         res.json().then((data) => {
             if (!data.auth) {
