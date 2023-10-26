@@ -229,3 +229,33 @@ canvas {
     transform: translate(-50%,-50%);
     height: 500px;
 }
+
+.coonvas-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.coonvas-container:after {
+    content: 'Stellarfire Excalibur';
+    font-size: 30px;
+    color: white;
+    bottom: 20px;
+    left: 25%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+}
+
+.coonvas-container:before {
+    content: 'Quantum Titan';
+    font-size: 30px;
+    color: white;
+    bottom: 20px;
+    left: 75%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+}
