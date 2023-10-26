@@ -30,6 +30,9 @@ body {
 }
 
 .verification-form input {
+    font-family: 'Inter';
+    color: #FFF;
+    background-color: #242424;
     font-size: 22px;
     padding-left: 20px;
     width: 400px;
@@ -43,17 +46,18 @@ body {
     margin-top: 30px;
     margin-left: 10px;
     margin-bottom: 5px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .submit-btn {
     font-size: 22px;
     font-family: 'Inter';
-    background-color: white;
+    background-color: #242424;
+    color: white;
     border: none;
     margin-top: 50px;
-    border-radius: 1000vw;
-    width: 400px;
+    border-radius: 8px;
+    width: 420px;
     height: 50px;
     transition:all 0.5s;
 }
@@ -98,12 +102,6 @@ body {
     right: -250px;
     bottom: 20px;
 }
-.nerv-logo2 {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    animation: fade-in 1s forwards;
-}
 
 .cosmo-logo {
     position: fixed;
@@ -134,4 +132,36 @@ body {
     top: 50px;
     left: 50px;
     animation: float-in 2s forwards;
+}
+
+.verification-form:before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    height: 100%;
+    position: absolute;
+    width: 600px;
+    animation: go-in 1s forwards;
+    border-radius: 0 50px 50px 0;
+}
+
+@keyframes go-in {
+    0% {
+        left: -600px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.hail-nerv {
+    width:750px;
+    height: 100px;
+    background: url('assets/images/hailnerve.png') center/cover;
+    position: fixed;
+    right: calc(50% - 300px);
+    top: 50%;
+    transform: translate(50%,-50%);
 }
