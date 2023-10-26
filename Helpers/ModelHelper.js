@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const scenePath = '/assets/models/gun.gltf'
+const scenePath = '/assets/models/Gun1.gltf'
 
 export const LoadGLTFByPath = (scene) => {
     return new Promise((resolve, reject) => {

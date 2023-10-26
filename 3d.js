@@ -7,7 +7,11 @@ let renderer = new THREE.WebGLRenderer({
   antialias: true,
 });
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+const ambientLight = new THREE.AmbientLight(0xFFFFFF);
+const directionalLight = new THREE.DirectionalLight(0xFFFFFF);
+ambientLight.intensity = 0.3;
+
+renderer.setSize(500,500);
 renderer.shadows = true;
 renderer.shadowType = 1;
 renderer.shadowMap.enabled = true;
@@ -20,7 +24,9 @@ renderer.setClearColor(0xffffff, 0);
 renderer.outputColorSpace = THREE.SRGBColorSpace 
 const scene = new THREE.Scene();
 LoadGLTFByPath(scene);
-const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,0.1,1000);
+scene.add( directionalLight );
+scene.add( ambientLight );
+const camera = new THREE.PerspectiveCamera(60,1,0.1,1000);
 camera.position.setX(1);
 camera.position.setY(1);
 camera.position.setZ(1);
