@@ -43,9 +43,9 @@ var pages={
 <li class='list2'>Electrostatic Grappling Gloves </li>
 </ul>
 <div class="buttons">
-<button class="logout" onclick="openpopup('drone')">Learn More</button><button class="logout" onclick="openpopup('drone-pic')">View</button><br>
-<button class="logout" onclick="openpopup('ring')">Learn More</button><button class="logout" onclick="openpopup('ring-pic')">View</button><br>
-<button class="logout" onclick="openpopup('gloves')">Learn More</button><button class="logout" onclick="openpopup('gloves-pic')">View</button>
+<div class="btn-container"><button class="logout btn-left" onclick="openpopup('drone')">Learn More</button><button class="logout btn-right" onclick="openpopup('drone-pic')">View</button></div>
+<div class="btn-container"><button class="logout btn-left" onclick="openpopup('ring')">Learn More</button><button class="logout btn-right" onclick="openpopup('ring-pic')">View</button></div>
+<div class="btn-container"><button class="logout btn-left" onclick="openpopup('gloves')">Learn More</button><button class="logout btn-right" onclick="openpopup('gloves-pic')">View</button></div>
 </div>
 </div>`
 }
