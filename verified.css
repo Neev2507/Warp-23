@@ -259,3 +259,11 @@ canvas {
     display: block;
     position: absolute;
 }
+
+.close-button {
+    cursor: pointer;
+}
+
+.list.res {
+    cursor: pointer;
+}
