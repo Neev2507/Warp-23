@@ -30,7 +30,7 @@ var pages={
     resources:`<p class="headlines-heading">Resources</p>
     <ul>
         <li class='list res' onclick="openpopup('weapons')">Defence Weapon Inventory</li>
-        <li class='list res' >Inter-Planetary Allies</li>
+        <li class='list res' onclick="openpopup('story')" >The origin of CosmoShield</li>
         <li class='list res' onclick="openpopup('defence-house')" >Defence House Locations</li>
     </ul>`,
     spyware: `
