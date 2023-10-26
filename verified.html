@@ -2,8 +2,16 @@
 <html>
     <head><title>Verified</title>
     <link rel="stylesheet" href="verified.css">
-    <script defer src="verified.js"></script>
+    <script type="module" defer src="verified.js"></script>
     <script src="verification.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+          }
+        }
+      </script>
     </head>
     <body>
         <div class="bg-img"></div>

@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 var pages={
     verified: `<p class="verified">Verified<span class="loading">...</span> Kevin Baba.</p>`,
     headlines:`<p class="headlines-heading">Headlines</p>
