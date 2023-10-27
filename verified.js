@@ -32,6 +32,7 @@ var pages={
         <li class='list res' onclick="openpopup('weapons')">Defence Weapon Inventory</li>
         <li class='list res' onclick="openpopup('story')" >The origin of CosmoShield</li>
         <li class='list res' onclick="openpopup('defence-house')" >Defence House Locations</li>
+        <li class='list res' onclick="openpopup('emergency')">Emergency Protocols</li>
     </ul>`,
     spyware: `
 
